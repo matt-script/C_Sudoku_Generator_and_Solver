@@ -1,0 +1,109 @@
+# Project: SudokuGen
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = control.o control_num.o crea_griglia.o delete_list.o do_op.o find_num.o find_q.o fprint_sudoku.o insert_num.o insertSudoku.o main.o newfile.o play.o play_solve.o play_sudoku.o randGrigliaSudoku.o solve.o solve_sudoku.o start.o taglia.o taglia_c.o taglia_num.o taglia_q.o taglia_r.o undo.o w_pquad.o randSudoku.o crea_lista.o
+LINKOBJ  = control.o control_num.o crea_griglia.o delete_list.o do_op.o find_num.o find_q.o fprint_sudoku.o insert_num.o insertSudoku.o main.o newfile.o play.o play_solve.o play_sudoku.o randGrigliaSudoku.o solve.o solve_sudoku.o start.o taglia.o taglia_c.o taglia_num.o taglia_q.o taglia_r.o undo.o w_pquad.o randSudoku.o crea_lista.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = SudokuGen.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+control.o: control.c
+	$(CC) -c control.c -o control.o $(CFLAGS)
+
+control_num.o: control_num.c
+	$(CC) -c control_num.c -o control_num.o $(CFLAGS)
+
+crea_griglia.o: crea_griglia.c
+	$(CC) -c crea_griglia.c -o crea_griglia.o $(CFLAGS)
+
+delete_list.o: delete_list.c
+	$(CC) -c delete_list.c -o delete_list.o $(CFLAGS)
+
+do_op.o: do_op.c
+	$(CC) -c do_op.c -o do_op.o $(CFLAGS)
+
+find_num.o: find_num.c
+	$(CC) -c find_num.c -o find_num.o $(CFLAGS)
+
+find_q.o: find_q.c
+	$(CC) -c find_q.c -o find_q.o $(CFLAGS)
+
+fprint_sudoku.o: fprint_sudoku.c
+	$(CC) -c fprint_sudoku.c -o fprint_sudoku.o $(CFLAGS)
+
+insert_num.o: insert_num.c
+	$(CC) -c insert_num.c -o insert_num.o $(CFLAGS)
+
+insertSudoku.o: insertSudoku.c
+	$(CC) -c insertSudoku.c -o insertSudoku.o $(CFLAGS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+newfile.o: newfile.c
+	$(CC) -c newfile.c -o newfile.o $(CFLAGS)
+
+play.o: play.c
+	$(CC) -c play.c -o play.o $(CFLAGS)
+
+play_solve.o: play_solve.c
+	$(CC) -c play_solve.c -o play_solve.o $(CFLAGS)
+
+play_sudoku.o: play_sudoku.c
+	$(CC) -c play_sudoku.c -o play_sudoku.o $(CFLAGS)
+
+randGrigliaSudoku.o: randGrigliaSudoku.c
+	$(CC) -c randGrigliaSudoku.c -o randGrigliaSudoku.o $(CFLAGS)
+
+solve.o: solve.c
+	$(CC) -c solve.c -o solve.o $(CFLAGS)
+
+solve_sudoku.o: solve_sudoku.c
+	$(CC) -c solve_sudoku.c -o solve_sudoku.o $(CFLAGS)
+
+start.o: start.c
+	$(CC) -c start.c -o start.o $(CFLAGS)
+
+taglia.o: taglia.c
+	$(CC) -c taglia.c -o taglia.o $(CFLAGS)
+
+taglia_c.o: taglia_c.c
+	$(CC) -c taglia_c.c -o taglia_c.o $(CFLAGS)
+
+taglia_num.o: taglia_num.c
+	$(CC) -c taglia_num.c -o taglia_num.o $(CFLAGS)
+
+taglia_q.o: taglia_q.c
+	$(CC) -c taglia_q.c -o taglia_q.o $(CFLAGS)
+
+taglia_r.o: taglia_r.c
+	$(CC) -c taglia_r.c -o taglia_r.o $(CFLAGS)
+
+undo.o: undo.c
+	$(CC) -c undo.c -o undo.o $(CFLAGS)
+
+w_pquad.o: w_pquad.c
+	$(CC) -c w_pquad.c -o w_pquad.o $(CFLAGS)
+
+randSudoku.o: randSudoku.c
+	$(CC) -c randSudoku.c -o randSudoku.o $(CFLAGS)
+
+crea_lista.o: crea_lista.c
+	$(CC) -c crea_lista.c -o crea_lista.o $(CFLAGS)
